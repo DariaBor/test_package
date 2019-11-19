@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'test_package'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    gradleWrapperVerion = '5.0'
+    cukesVersion = '0.0.32'
+    junitVersion = '4.11'
+    jacksonVersion = '2.9.7'
+    slf4jVersion = '1.7.25'
+}
+
+dependencies {
+    compile group: 'lv.ctco.cukes', name: 'cukes-rest', version: cukesVersion
+    compile group: 'junit', name: 'junit', version: junitVersion
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: jacksonVersion
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: slf4jVersion
+}
